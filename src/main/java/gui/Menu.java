@@ -17,7 +17,7 @@ public class Menu {
         JTable table = new JTable(list, header);
         panel.add(new JScrollPane(table));
         frame.add(panel);
-        frame.setSize(550, 400);
+        frame.setSize(1280, 720);
         frame.setVisible(true);
     }
 }
