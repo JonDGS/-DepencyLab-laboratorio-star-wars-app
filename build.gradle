@@ -2,6 +2,7 @@ import com.sun.tools.javac.Main
 
 plugins {
     id 'application'
+    id "org.sonarqube" version "3.1.1"
 }
 
 group 'org.example'
@@ -17,6 +18,14 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.2'
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "jonDorito_-DepencyLab-laboratorio-star-wars-app"
+    property "sonar.organization", "doritos"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 application{
